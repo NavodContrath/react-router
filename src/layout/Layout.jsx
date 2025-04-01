@@ -11,13 +11,13 @@ export default function Layout() {
                         </div>
                         <ul className="nav justify-content-between">
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="/" aria-current="page">Home</a>
+                                <NavLink className="nav-link text-white" to="/" aria-current="page">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="/about-us">About us</a>
+                                <NavLink className="nav-link text-white" to="/about-us">About us</NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="/products">Products</a>
+                                <NavLink className="nav-link text-white" to="/products">Products</NavLink>
                             </li>
                         </ul>
                     </div>
