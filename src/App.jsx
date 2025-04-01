@@ -1,10 +1,13 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
+import AboutUs from "./pages/About-us"
 
 function App() {
 
 
   return (
     <>
+
       <header className="bg-success py-3">
         <div className="m-auto" style={{ width: "1500px" }}>
           <div className="d-flex justify-content-between">
@@ -13,10 +16,10 @@ function App() {
             </div>
             <ul className="nav justify-content-between">
               <li className="nav-item">
-                <a className="nav-link text-white" href="#" aria-current="page">Home</a>
+                <a className="nav-link text-white" href="/" aria-current="page">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" href="#">About us</a>
+                <a className="nav-link text-white" href="/about-us">About us</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link text-white" href="#">Products</a>
@@ -25,45 +28,12 @@ function App() {
           </div>
         </div>
       </header>
-      <main className="my-5">
-        <section>
-          <div className="jumbo mb-5 mt-3 ">
-            <div className="container bg-dark p-5">
-              <h1>Welcome!</h1>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla vero atque, voluptatum ducimus delectus laboriosam incidunt voluptas maxime debitis ab hic similique ex mollitia veritatis animi optio aut explicabo molestiae?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta in, quam quaerat perferendis, doloribus esse eos culpa saepe eum fugiat doloremque repellat architecto quas, a dolor? Eveniet at dolor cupiditate?
-              </p>
-              <button className="btn btn-outline-success" type="button">Register now!</button>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div className="description">
-            <div className="container row justify-content-between m-auto">
-              <div className="col-6">
-                <div className="card">
-                  <img src="https://picsum.photos/id/29/4000/2670" className="p-3" width={"100%"} height={"400px"} alt="" />
-                </div>
-              </div>
-              <div className="col-6">
-                <div className="card p-3">
-                  <div className="card-head p-3 border-bottom">
-                    <h1>Where the magic happens</h1>
-                  </div>
-                  <div className="card-body p-2 mt-3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quas numquam, expedita a beatae aperiam dolore temporibus, nemo quibusdam, asperiores nam iusto dolores doloremque quam obcaecati deleniti nesciunt necessitatibus ipsam!</p>
-                    <form action="" className="my-5">
-                      <input type="email" name="user-mail" id="user-mail" className="btn border-light" />
-                      <button type="submit" className="btn btn-outline-success ">Submit</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-      </main>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" Component={Home} />
+          <Route path="/about-us" Component={AboutUs} />
+        </Routes>
+      </BrowserRouter>
       <footer className="bg-dark py-3">
         <div className="m-auto" style={{ width: "1500px" }}>
           <div className="d-flex justify-content-between align-items-center">
