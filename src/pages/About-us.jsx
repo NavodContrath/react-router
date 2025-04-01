@@ -15,7 +15,7 @@ export default function AboutUs() {
                 </section>
                 <section>
                     <div className="description">
-                        <div className="container row g-5  m-auto">
+                        <div className="container row align-items-center g-5  m-auto">
                             <h1 className="my-3">Our Teams</h1>
                             <div className="col-4">
                                 <div className="card" >
