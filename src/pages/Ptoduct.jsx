@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import products from "../data/products";
 
 export default function Product() {
     const { id } = useParams()
     const [product, setProduct] = useState('')
+    const navigate = useNavigate();
 
     useEffect(() => {
         const foundProduct = products.find(prod => prod.id === Number(id))
@@ -27,6 +28,9 @@ export default function Product() {
                                 </div>
                             </div>
                         </div>
+                        <button onClick={() => navigate(-1)} className='btn btn-success'>
+                            <i class="bi bi-arrow-left-short"></i>
+                        </button>
                     </div>
                     <div className='container border'>
                         <h2>See more..</h2>
