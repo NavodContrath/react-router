@@ -29,7 +29,7 @@ export default function Products() {
                                                 <div className="card-body">
                                                     <p>{prod.price} $</p>
                                                     <Link to={`/products/${prod.id}`} className="btn btn-success">
-                                                        See more..
+                                                        Buy now..
                                                     </Link>
                                                 </div>
                                                 <div className="card-foot p-3">
