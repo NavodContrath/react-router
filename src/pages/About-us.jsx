@@ -19,7 +19,7 @@ export default function AboutUs() {
                             <h1 className="my-3">Our Teams</h1>
                             <div className="col-4">
                                 <div className="card" >
-                                    <img src="https://picsum.photos/id/29/4000/267" width={"100%"} alt="" />
+                                    <img src="https://picsum.photos/id/29/4000/2670" width={"100%"} alt="" />
                                 </div>
                             </div>
                             <div className="col-8">
@@ -67,7 +67,7 @@ export default function AboutUs() {
                             <div className="col-4">
                                 <div className="card" >
                                     <img src="https://picsum.photos/id/29/4000/2670" width={"100%"} alt="" />
-                                </div>0
+                                </div>
                             </div>
                             <div className="col-8">
                                 <div className="card p-3">
