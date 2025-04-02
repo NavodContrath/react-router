@@ -1,4 +1,5 @@
 import products from "../data/products"
+import { Link } from "react-router-dom"
 export default function Products() {
     return (
         <>
@@ -20,14 +21,16 @@ export default function Products() {
                             {
                                 products.map(prod => {
                                     return (
-                                        <div className="col-3">
+                                        <div className="col-3" key={prod.id}>
                                             <div className="card">
                                                 <div className="card-head p-3">
                                                     <h3>{prod.title}</h3>
                                                 </div>
                                                 <div className="card-body">
-                                                    <img src="" alt="" />
                                                     <p>{prod.price} $</p>
+                                                    <Link to={`/products/${prod.id}`} className="btn btn-success">
+                                                        See more..
+                                                    </Link>
                                                 </div>
                                                 <div className="card-foot p-3">
                                                     <p>{prod.description}</p>
